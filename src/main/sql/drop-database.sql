@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS cabinet.user;
+DROP DATABASE IF EXISTS cabinet;

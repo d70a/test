@@ -1,0 +1,1 @@
+#CREATE TABLE cabinet.user( id INT NOT NULL AUTO_INCREMENT, email varchar(60) NOT NULL, password varchar(60) NOT NULL, nameFirst varchar(60) NULL, nameMiddle varchar(60) NULL, nameLast varchar(60) NULL, code varchar(3) NULL, phone varchar(7) NULL, idCard_id INT NULL,PRIMARY KEY (id)) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-run in tomcat</actionName>
+            <displayName>run in tomcat</displayName>
+            <goals>
+                <goal>tomcat7:run</goal>
+            </goals>
+            <properties>
+                <Env.MAVEN_OPTS>-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9009,server=y,suspend=n</Env.MAVEN_OPTS>
+                
+            </properties>
+        </action>
+        <action>
+            <actionName>test</actionName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>test.single</actionName>
+            <goals>
+                <goal>test-compile</goal>
+                <goal>surefire:test</goal>
+            </goals>
+            <properties>
+                <test>${packageClassName}</test>
+                
+            </properties>
+        </action>
+        <action>
+            <actionName>debug.test.single</actionName>
+            <goals>
+                <goal>test-compile</goal>
+                <goal>surefire:test</goal>
+            </goals>
+            <properties>
+                <test>${packageClassName}</test>
+                <forkMode>once</forkMode>
+                <maven.surefire.debug>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address}</maven.surefire.debug>
+                <jpda.listen>true</jpda.listen>
+                
+            </properties>
+        </action>
+    </actions>

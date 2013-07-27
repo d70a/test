@@ -1,0 +1,5 @@
+@import '../../ext-theme-classic/ext-theme-classic-all.css';
+
+.grid-no-header .x-column-header {
+    display:none;
+}

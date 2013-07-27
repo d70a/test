@@ -1,0 +1,10 @@
+C:\soft\lang\db\mysql-5.6.12-winx64\bin>mysql.exe --user=root mysql
+
+mysql> create user 'cabinet'@'localhost' identified by 'cabinet';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all privileges on *.* to 'cabinet'@'localhost' with grant option;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create database cabinet character set 'utf8';
+Query OK, 1 row affected (0.00 sec)
