@@ -20,6 +20,8 @@ Ext.application({
     appTitle: 'Cabinet example',
     /* Main startup function, create global viewport here. */
     launch: function() {
+        
+        this.addConsole();
 
         /* Try to load localization based on browser/OS locale settings */
         loadLocale = function(me) {
@@ -54,8 +56,6 @@ Ext.application({
             loadUrl(localeExt);
             loadUrl(localeHR);
         };
-
-        this.addConsole();
 
         loadLocale(this);
     },
